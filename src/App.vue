@@ -1,5 +1,5 @@
 <template>
-  <img alt="NFTT logo" src="./assets/LOL.jpg">
+  <!-- <img alt="NFTT logo" src="./assets/LOL.jpg"> -->
   <HelloWorld msg="Welcome to NFTT"/>
 </template>
 
