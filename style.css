@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+}
+
+#app {
+  /* Center content on the page, set your font. */
+  font: 1em/150% Helvetica, Arial, sans-serif;
+  margin: 0em auto;
+  padding: 0em;
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 100vh;
+}
