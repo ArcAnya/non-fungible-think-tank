@@ -28,7 +28,15 @@ onMounted(() => {
 
 <template>
   <header>
+    <a class="logo" href="#Home" title="Return to the front page.">
+      <svg width="60" height="60">
+        <circle cx="30" cy="30" r="30"/>
+      </svg>
+      <p><strong>NFTT</strong></p>
+    </a>
     <a href="#validators" title="Read about the validators.">Validators</a>
+    <a href="#stake" title="Stake with our vaildators">Stake</a>
+    <a href="#blog" title="Read our latest blog posts">Blog</a>
     <a href="#Discord" title="Join our discord.">Discord</a>
     <button @click="loginToggle" v-if="walletConnected">Log out</button>
     <button @click="loginToggle" v-else>Connect Wallet</button>
@@ -48,20 +56,36 @@ onMounted(() => {
 
 header {
   height: 8vh;
-  border-bottom: 2px solid black;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 0 35%;
-  position: relative;
+  height: 64px;
+}
+
+header a {
+  padding: 8px;
+  text-decoration: none;
+  color: #5c5589;
+  font-weight: 600;
+}
+
+a.logo {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+a.logo p {
+  margin: 3px 0 0;
+  padding-left: 20px;
+  font-size: 1.5em;
+  letter-spacing: 0.25em;
 }
 
 header button {
   padding: 1em 2em;
   width: 150px;
-  position: absolute;
-  right: 1%;
 }
 
 /* main */
