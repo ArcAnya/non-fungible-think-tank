@@ -1,28 +1,17 @@
 <script setup>
-// App for a Count button using Composition Api
 import { ref, onMounted } from 'vue'
 
-// reactive state
-const count = ref(0)
+import ToDo from './components/ToDo.vue'
 let walletConnected = ref(false)
-
-// functions that mutate state and trigger updates
-function increment() {
-  count.value++
-}
+let mobileNav = ref(false)
 
 function loginToggle() {
-  if (walletConnected.value === true) {
-    walletConnected.value = false
-  } else {
-    walletConnected.value = true
-  }
+  walletConnected.value = !walletConnected.value
 }
 
-// lifecycle hooks
-onMounted(() => {
-  console.log(`The initial count is ${count.value}.`)
-})
+function navToggle() {
+  mobileNav.value = !mobileNav.value
+}
 
 </script>
 
@@ -34,17 +23,29 @@ onMounted(() => {
       </svg>
       <p><strong>NFTT</strong></p>
     </a>
-    <a href="#validators" title="Read about the validators.">Validators</a>
-    <a href="#stake" title="Stake with our vaildators">Stake</a>
-    <a href="#blog" title="Read our latest blog posts">Blog</a>
-    <a href="#Discord" title="Join our discord.">Discord</a>
-    <button @click="loginToggle" v-if="walletConnected">Log out</button>
-    <button @click="loginToggle" v-else>Connect Wallet</button>
+    <ul class="mobileNav" v-if="mobileNav">
+      <li><a href="#stake" title="Stake with our vaildators">Stake</a></li>
+      <li><a href="#blog" title="Read our latest blog posts">Blog</a></li>
+      <li><a href="#Discord" title="Join our discord.">Discord</a></li>
+    </ul>
+    <!-- Hamburger menu -->
+    <button class="hamburgermenu" @click="navToggle">
+      <span class="top"></span>
+      <span class="mid"></span>
+      <span class="bottom"></span>
+    </button>
+    <ul class="desktopNav">
+      <li><a href="#stake" title="Stake with our vaildators">Stake</a></li>
+      <li><a href="#blog" title="Read our latest blog posts">Blog</a></li>
+      <li><a href="#Discord" title="Join our discord.">Discord</a></li>
+    </ul>
   </header>
   <main>
     <h1>NFTT</h1>
     <p>Non fungable think tank</p>
-  <button class="mainlogin">Connect Wallet</button>
+    <button @click="loginToggle" v-if="walletConnected">Log out</button>
+    <button @click="loginToggle" v-else>Connect Wallet</button>
+    <ToDo />
   </main>
 </template>
 
@@ -55,12 +56,12 @@ onMounted(() => {
 /* Header */
 
 header {
-  height: 8vh;
+  padding: 22px 0;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
+  flex-flow: row wrap;
+  justify-content: space-between;
   align-items: center;
-  height: 64px;
+  /*height: 64px;*/
 }
 
 header a {
@@ -71,6 +72,7 @@ header a {
 }
 
 a.logo {
+  margin: 2%;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -83,9 +85,67 @@ a.logo p {
   letter-spacing: 0.25em;
 }
 
-header button {
-  padding: 1em 2em;
-  width: 150px;
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+ul.mobileNav {
+  width: 100%;
+  order: 1;
+}
+
+ul.mobileNav li {
+  margin: 2.1em 0em;
+  font-size: 1.25em;
+}
+
+header .hamburgermenu {
+  margin: 8px;
+  height: 50px;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  border: none;
+  background-color: #ffffff;
+}
+
+header .hamburgermenu span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin: auto;
+  background: #232323;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.hamburgermenu span.top {
+  transform: translateY(-8px);
+}
+
+.hamburgermenu span.bottom {
+  transform: translateY(8px);
+}
+
+.desktopNav {
+  display: none;
+  margin-right: 16%;
+}
+@media (min-width: 500px) {
+  .hamburgermenu, .mobileNav {
+    display: none;
+  }
+
+  ul.desktopNav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    flex: 1;
+  }
 }
 
 /* main */
@@ -97,4 +157,10 @@ main {
   justify-content: center;
   align-items: center;
 }
+
+main button {
+  padding: 1em 2em;
+  width: 150px;
+}
+
 </style>
