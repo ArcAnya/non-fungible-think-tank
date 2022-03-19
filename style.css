@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+  margin: 0;
+}
+
+#app {
+  /* Center content on the page, set your font. */
+  font: 1em/150% 'Poppins', Helvetica, Arial, sans-serif;
+  margin: 0em auto;
+  padding: 0em;
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 100vh;
+  max-width: 1350px;
+}
