@@ -19,7 +19,6 @@ body {
 /* Header */
 
 header {
-  padding: 22px 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -35,7 +34,7 @@ header a {
 }
 
 a.logo {
-  margin: 2%;
+  margin: 0 2%;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -114,14 +113,52 @@ header .hamburgermenu span {
 /* main */
 
 main {
+  padding-top: 2em;
   flex: 1;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  background-color: #f0f3f9;
 }
 
 main button {
   padding: 1em 2em;
   width: 150px;
+}
+
+/* Stake */
+
+.stake {
+}
+
+.stakeasset {
+  text-align: center;
+  margin-bottom: 2em;
+  background-color: #fff;
+  border-radius: 10px;
+  aspect-ratio: 1 / 1;
+  transition: transform .1s;
+  position: relative;
+}
+
+.stakeasset:hover {
+  display: inline;
+  transform: scale(1.03);
+}
+
+.assetapr {
+  padding: .1em .8em;
+  font-weight: 600;
+  border-radius: 15px;
+  display: inline;
+  color: #fff;
+  background-color: #28a745;
+  position: absolute;
+  top: .1em;
+  left: .8em;
+}
+
+.assetvalue {
+  
 }

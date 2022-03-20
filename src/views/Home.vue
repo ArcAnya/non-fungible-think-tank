@@ -2,6 +2,7 @@
 import { ref, onMounted } from 'vue'
 
 import ToDo from '@/components/ToDo.vue'
+
 let walletConnected = ref(false)
 
 function loginToggle() {
