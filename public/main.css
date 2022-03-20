@@ -133,13 +133,15 @@ main button {
 }
 
 .stakeasset {
-  text-align: center;
   margin-bottom: 2em;
+  min-height: 280px;
+  text-align: center;
   background-color: #fff;
   border-radius: 10px;
   aspect-ratio: 1 / 1;
   transition: transform .1s;
   position: relative;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3);
 }
 
 .stakeasset:hover {
@@ -155,10 +157,21 @@ main button {
   color: #fff;
   background-color: #28a745;
   position: absolute;
-  top: .1em;
-  left: .8em;
+  top: -10px;
+  left: 5px;
 }
 
 .assetvalue {
-  
+  padding: .1em .4em;
+  font-weight: 600;
+  color: #fff;
+  background-color: #5c5589;
+  border-radius: .25rem;
+  position: absolute;
+  top: 20px;
+  left: 5px;
+}
+
+.assetimg {
+  margin-top: 2.2em;
 }
