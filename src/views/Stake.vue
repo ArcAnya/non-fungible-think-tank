@@ -7,9 +7,11 @@ import StakePassage from '@/components/StakePassage.vue'
 </script>
 
 <template>
-  <main class="stake">
-    <h1>Stake</h1>
-    <StakeCommercio />
-    <StakePassage />
+  <main>
+    <section class="content">
+      <h1>Stake</h1>
+      <StakeCommercio />
+      <StakePassage />
+    </section>
   </main>
 </template>
