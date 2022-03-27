@@ -9,6 +9,7 @@ import StakePassage from '@/components/StakePassage.vue'
 <template>
   <main>
     <section class="content">
+      <p>*Currenty unavailable.</p>
       <h1>Stake</h1>
       <StakeCommercio />
       <StakePassage />

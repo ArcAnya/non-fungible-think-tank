@@ -18,9 +18,14 @@ function navToggle() {
       </a>
       <ul class="mobileNav" v-if="mobileNav">
         <li><a href="/stake" title="Stake with our vaildators">Stake</a></li>
-        <li><a href="/about" title="Frequently asked questions">About</a></li>
-        <li><a href="#blog" title="Read our latest blog posts">Blog</a></li>
-        <li><a href="https://discord.gg/kxy7zkdBGf" title="Join our discord.">Discord</a></li>
+        <li><a href="/about" title="Frequently asked questions">FAQ</a></li>
+        <li>
+          <span>
+            <a href="https://discord.gg/kxy7zkdBGf" title="Join our discord."><img src="/discord.svg" width="28" height="28"></a>
+            <a href="https://www.youtube.com/channel/UC57l2EsR_Za5IiKn-je0XXA" title="Subscribe to NFTT's youtube channel."><img src="/youtube.svg" width="28" height="28"></a>
+            <a href="https://twitter.com/crusader_w" title="Follow CrusaderW on twitter."><img src="/twitter.svg" width="28" height="28"></a>
+          </span>
+        </li>
       </ul>
       <!-- Hamburger menu -->
       <button class="hamburgermenu" @click="navToggle">
@@ -30,10 +35,13 @@ function navToggle() {
       </button>
       <ul class="desktopNav">
         <li><a href="/stake" title="Stake with our vaildators">Stake</a></li>
-        <li><a href="/about" title="Frequently asked questions">About</a></li>
-        <li><a href="#blog" title="Read our latest blog posts">Blog</a></li>
-        <li><a href="https://discord.gg/kxy7zkdBGf" title="Join our discord.">Discord</a></li>
+        <li><a href="/about" title="Frequently asked questions">FAQ</a></li>
       </ul>
+      <span class="desktopsocials">
+        <a href="https://discord.gg/kxy7zkdBGf" title="Join our discord."><img src="/discord.svg" width="28" height="28"></a>
+        <a href="https://www.youtube.com/channel/UC57l2EsR_Za5IiKn-je0XXA" title="Subscribe to NFTT's youtube channel."><img src="/youtube.svg" width="28" height="28"></a>
+        <a href="https://twitter.com/crusader_w" title="Follow CrusaderW on twitter."><img src="/twitter.svg" width="28" height="28"></a>
+      </span>
     </section>
   </header>
 </template>

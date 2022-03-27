@@ -19,7 +19,7 @@ button {
   padding: 1em 2em;
   min-width: 150px;
   color: #fafaff;
-  background-color: #453a8f;
+  background-color: #130b43;
   border: 1px solid #130b43;
   border-radius: 6px;
 }
@@ -67,14 +67,19 @@ ul {
   list-style-type: none;
 }
 
-ul.mobileNav {
+.mobileNav {
   width: 100%;
   order: 1;
 }
 
-ul.mobileNav li {
+.mobileNav li {
   margin: 2.1em 0em;
   font-size: 1.25em;
+}
+
+.mobileNav span {
+  display: flex;
+  justify-content: center;
 }
 
 .hamburgermenu {
@@ -109,9 +114,14 @@ ul.mobileNav li {
 
 .desktopNav {
   display: none;
-  margin-right: 16%;
+  margin-right: 4%;
 }
-@media (min-width: 500px) {
+
+.desktopsocials {
+  display: none;
+}
+
+@media (min-width: 540px) {
   .hamburgermenu, .mobileNav {
     display: none;
   }
@@ -121,6 +131,22 @@ ul.mobileNav li {
     flex-flow: row nowrap;
     justify-content: space-around;
     flex: 1;
+  }
+
+  .desktopsocials {
+    display: inline;
+    margin-right: 5%;
+  }
+
+  .desktopsocials a {
+    display: inline-block;
+    height: 28px;
+  }
+}
+
+@media (min-width: 760px) {
+  .desktopNav {
+    margin-right: 20%;
   }
 }
 
@@ -194,6 +220,10 @@ h1.nftt {
   margin-top: 2.2em;
 }
 
+.passage {
+  cursor: not-allowed;
+}
+
 /* FAQ section */
 
 .faq-title {
@@ -213,7 +243,7 @@ h1.nftt {
 .faq article {
   padding: .3em .5em .3em 1.5em;
   margin-bottom: 15px;
-  box-shadow: 0 0 10px 25px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 0 10px 8px rgba(0, 0, 0, 0.03);
   border: 1px solid #ebebeb;
   border-radius: 4px;
   position: relative;
@@ -245,4 +275,38 @@ h1.nftt {
 
 .hidetext img {
   transform:rotate(180deg);
+}
+
+/* Footer */
+
+footer {
+  margin-top: 4em;
+  color: #c8d5ef;
+  background-color: #130b43;
+  border-top: 2px solid #453a8f;
+}
+
+footer .credits {
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 2em 4em 3em 3em;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+footer a {
+  color: #fafaff;
+  font-weight: 500;
+}
+
+footer p {
+  width: 100%;
+}
+
+footer .copyright {
+  color: #e1ebff;
+  font-weight: 600;
+  width: 100%; 
 }
