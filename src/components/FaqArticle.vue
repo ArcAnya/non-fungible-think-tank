@@ -9,7 +9,7 @@ const hideText = ref(true)
 
 <template>
     <article :class="{ hidetext: hideText }">
-      <section @click="this.hideText = !this.hideText">
+      <section @click="hideText = !hideText">
       <h2 id="faq-show-more">{{ question }}</h2>
       <img src="/triangleup16x13.svg" alt="Show more">
       </section>

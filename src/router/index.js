@@ -5,8 +5,8 @@ import About from '@/views/About.vue'
 
 const routes = [
   {path: '/', name: 'Home', component: Home},
-  {path: '/stake', name: 'stake', component: ()=>import('@/views/Stake.vue')},
-  {path: '/about', name: 'about', component: ()=>import('@/views/About.vue')},
+  {path: '/stake', name: 'stake', component: Stake},
+  {path: '/about', name: 'about', component: About},
 ]
 
 const router = createRouter({
