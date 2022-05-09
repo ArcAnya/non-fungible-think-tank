@@ -13,20 +13,31 @@ body {
   display: flex;
   flex-flow: column nowrap;
   min-height: 100vh;
-  max-width: 1350px;
+}
+
+button {
+  padding: 1em 2em;
+  min-width: 150px;
+  color: #fafaff;
+  background-color: #130b43;
+  border: 1px solid #130b43;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 /* Header */
 
-header {
+.nav {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1400px;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  /*height: 64px;*/
 }
 
-header a {
+.nav a {
   padding: 8px;
   text-decoration: none;
   color: #5c5589;
@@ -38,6 +49,10 @@ a.logo {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+}
+
+a.logo img {
+  border-radius: 100%;
 }
 
 a.logo p {
@@ -53,26 +68,31 @@ ul {
   list-style-type: none;
 }
 
-ul.mobileNav {
+.mobileNav {
   width: 100%;
   order: 1;
 }
 
-ul.mobileNav li {
+.mobileNav li {
   margin: 2.1em 0em;
   font-size: 1.25em;
 }
 
-header .hamburgermenu {
+.mobileNav span {
+  display: flex;
+  justify-content: center;
+}
+
+.hamburgermenu {
   margin: 8px;
-  height: 50px;
+  min-width: 50px;
   aspect-ratio: 1 / 1;
   position: relative;
   border: none;
   background-color: #ffffff;
 }
 
-header .hamburgermenu span {
+.hamburgermenu span {
   display: block;
   width: 20px;
   height: 2px;
@@ -95,9 +115,14 @@ header .hamburgermenu span {
 
 .desktopNav {
   display: none;
-  margin-right: 16%;
+  margin-right: 4%;
 }
-@media (min-width: 500px) {
+
+.desktopsocials {
+  display: none;
+}
+
+@media (min-width: 540px) {
   .hamburgermenu, .mobileNav {
     display: none;
   }
@@ -108,29 +133,49 @@ header .hamburgermenu span {
     justify-content: space-around;
     flex: 1;
   }
+
+  .desktopsocials {
+    display: inline;
+    margin-right: 5%;
+  }
+
+  .desktopsocials a {
+    display: inline-block;
+    height: 28px;
+  }
+}
+
+@media (min-width: 760px) {
+  .desktopNav {
+    margin-right: 20%;
+  }
 }
 
 /* main */
 
 main {
-  padding-top: 2em;
   flex: 1;
+  background: linear-gradient(#f0f3f9, #fff);
+}
+
+main .content {
+  margin: 0 auto;
+  max-width: 1400px;
+  padding-top: 2em;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  background-color: #f0f3f9;
 }
 
-main button {
-  padding: 1em 2em;
-  width: 150px;
+h1.nftt {
+  margin: 10vh 8%;
+  align-self: flex-start;
+  line-height: 1.2;
+  font-size: 410%
 }
 
 /* Stake */
-
-.stake {
-}
 
 .stakeasset {
   margin-bottom: 2em;
@@ -174,4 +219,100 @@ main button {
 
 .assetimg {
   margin-top: 2.2em;
+}
+
+.passage {
+  cursor: not-allowed;
+}
+
+/* FAQ section */
+
+.faq-title {
+  margin: 2em;
+  font-size: 300%;
+  letter-spacing: 0.02em;
+  line-height: 1.05em;
+  font-weight: 600;
+}
+
+.faq {
+  margin-bottom: 5%;
+  width: 600px;
+  max-width: 95vw;
+}
+
+.faq article {
+  padding: .3em .5em .3em 1.5em;
+  margin-bottom: 15px;
+  box-shadow: 0 0 10px 8px rgba(0, 0, 0, 0.03);
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.faq section {
+  cursor: pointer;
+}
+
+.faq img {
+  position: absolute;
+  top: 26px;
+  right: 20px;
+
+}
+
+.faq h2 {
+  color: #130b43;
+  font-size: 1.2em;
+  width: 90%;
+}
+
+.faq p {
+  width: 90%;
+}
+
+/* Related to the hidetext class. */
+
+.hidetext p {
+  display: none;
+}
+
+.hidetext img {
+  transform:rotate(180deg);
+}
+
+/* Footer */
+
+footer {
+  margin-top: 4em;
+  color: #c8d5ef;
+  background-color: #130b43;
+  border-top: 2px solid #453a8f;
+}
+
+footer .credits {
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 2em 4em 3em 3em;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+footer a {
+  color: #fafaff;
+  font-weight: 500;
+}
+
+footer p {
+  width: 100%;
+}
+
+footer .copyright {
+  color: #e1ebff;
+  font-weight: 600;
+  width: 100%; 
 }

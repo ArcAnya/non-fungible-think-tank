@@ -1,8 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 
-import ToDo from '@/components/ToDo.vue'
-
 let walletConnected = ref(false)
 
 function loginToggle() {
@@ -13,10 +11,11 @@ function loginToggle() {
 
 <template>
   <main>
-    <h1>NFTT</h1>
-    <p>Non fungable think tank</p>
-    <button @click="loginToggle" v-if="walletConnected">Log out</button>
-    <button @click="loginToggle" v-else>Connect Wallet</button>
-    <ToDo />
+    <section class="content">
+      <h1 class="nftt">Non<br>Fungible<br>Think<br>Tank</h1>
+      <a href="/stake">
+        <button>Stake with us!</button>
+      </a>
+    </section>
   </main>
 </template>
