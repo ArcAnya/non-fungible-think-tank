@@ -3,6 +3,7 @@ import { ref, onMounted } from 'vue'
 
 import StakeCommercio from '@/components/StakeCommercio.vue'
 import StakePassage from '@/components/StakePassage.vue'
+import StakeAkash from '@/components/StakeAkash.vue';
 
 </script>
 
@@ -13,6 +14,7 @@ import StakePassage from '@/components/StakePassage.vue'
       <h1>Stake</h1>
       <StakeCommercio />
       <StakePassage />
+      <StakeAkash />
     </section>
   </main>
 </template>
